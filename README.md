@@ -3,7 +3,7 @@
   <a href="https://android-arsenal.com/api?level=25"><img alt="API" src="https://img.shields.io/badge/API-25%2B-brightgreen.svg?style=flat"/></a>
 </p>
 
-It is an app that records my learning journey in the an android development field 
+An app that records my learning journey in the android development field 
 
 ## guidance and considerations
 - you can see the learnt things in the commit history on https://github.com/AdevHelps
