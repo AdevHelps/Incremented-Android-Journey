@@ -8,8 +8,7 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="customButton" parent="Widget.Material3.Button.TonalButton">
-        <item name="backgroundTint">@color/green</item>
+    <style name="customTextView">
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/white</item>
     </style>
