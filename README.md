@@ -8,7 +8,8 @@ An app that records my learning journey in the android development field
 ## guidance and considerations
 - you can see the learnt things in the commit history on https://github.com/AdevHelps
 - NOTE: commits are isolated from each other and they are not connected
+- NOTE: the focus is solely on learning new things instead of focusing on the details like Accessibility features..
 
 ## Contact us
-Any suggestion or opinion is welcomed !  
+Any suggestion or opinion is welcomed !
 Contact Adev at adevhelps@gmail.com
