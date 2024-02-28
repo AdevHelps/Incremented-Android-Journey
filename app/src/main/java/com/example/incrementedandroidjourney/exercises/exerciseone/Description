@@ -1,0 +1,2 @@
+Exercise: define a basic module and component for providing dependencies. Practice injecting simple
+dependencies like String, Integer, etc., into an activity.

@@ -4,34 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.incrementedandroidjourney.MainActivity">
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/noDataAvailableTv"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No data available"
-        android:textColor="#8A8A8A"
-        android:textStyle="bold"
-        android:textSize="@dimen/_21sdp"
-        android:visibility="gone"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/mainRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/_7sdp"
-        android:layout_marginBottom="@dimen/_7sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        <Button
+            android:id="@+id/exerciseOneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exercise One"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+
+        <Button
+            android:id="@+id/exerciseTwoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Exercise Two"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+
+        <Button
+            android:id="@+id/exerciseThreeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exercise Three"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+
+        <Button
+            android:id="@+id/exerciseFourButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Exercise Four"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

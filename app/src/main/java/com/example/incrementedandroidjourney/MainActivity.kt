@@ -1,14 +1,17 @@
 package com.example.incrementedandroidjourney
 
-import android.os.Bundle
-import android.view.View
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
+import android.os.Bundle
+import com.example.incrementedandroidjourney.exercises.exercisefour.ExerciseFourActivity
+import com.example.incrementedandroidjourney.exercises.exerciseone.ExerciseOneActivityOne
+import com.example.incrementedandroidjourney.exercises.exercisethree.ExerciseThreeActivity
+import com.example.incrementedandroidjourney.exercises.exercisetwo.ExerciseTwoActivity
 import com.example.incrementedandroidjourney.databinding.ActivityMainBinding
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -19,28 +22,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.apply {
 
-            val call = Client.EndpointsInterfaceImpl.getAllTodos()
-            call.enqueue(object : Callback<List<TodoModel>?> {
-                override fun onResponse(
-                    call: Call<List<TodoModel>?>,
-                    response: Response<List<TodoModel>?>,
-                ) {
-                    setUpRecyclerViewAdapter(response.body())
-                }
+            exerciseOneButton.setOnClickListener { openActivity(ExerciseOneActivityOne()) }
 
-                override fun onFailure(call: Call<List<TodoModel>?>, t: Throwable) {
-                    noDataAvailableTv.visibility = View.VISIBLE
-                }
-            })
+            exerciseTwoButton.setOnClickListener { openActivity(ExerciseTwoActivity()) }
+
+            exerciseThreeButton.setOnClickListener { openActivity(ExerciseThreeActivity()) }
+
+            exerciseFourButton.setOnClickListener { openActivity(ExerciseFourActivity()) }
         }
     }
 
-    private fun setUpRecyclerViewAdapter(todoList: List<TodoModel>?){
-        binding.apply {
-        val adapter = RecyclerViewAdapter(todoList)
-            mainRecyclerView.adapter = adapter
-            mainRecyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
+    private fun openActivity(activity: Activity) {
+        Intent(this@MainActivity, activity::class.java).also {
+            startActivity(it)
         }
-
     }
 }

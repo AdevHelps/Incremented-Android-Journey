@@ -1,15 +1,13 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+<resources>
     <style name="Base.Theme.IncrementedAndroidJourney" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
         <item name="android:windowBackground">@color/darkBlue</item>
         <item name="android:statusBarColor">@color/darkBlue</item>
         <item name="colorPrimary">@color/green</item>
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
     <style name="customTextView">
         <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/_28ssp</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
